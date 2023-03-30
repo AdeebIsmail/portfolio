@@ -10,6 +10,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import Chip from "@mui/material/Chip";
 import EmailIcon from "@mui/icons-material/Email";
+import Divider from "@mui/material/Divider";
 const darkTheme = createTheme({
   palette: {
     mode: "dark",
@@ -60,7 +61,8 @@ function App() {
             <Chip label="ReFinance" variant="outlined" />{" "}
             <Chip label="Giftin" variant="outlined" />{" "}
             <Chip label="Empath" variant="outlined" />{" "}
-            <Chip label="OTHSCS" variant="outlined" />
+            <Chip label="LeetClone" variant="outlined" />{" "}
+            <Chip label="OTHSCS" variant="outlined" />{" "}
           </Grid>
           <Grid
             item
@@ -69,15 +71,38 @@ function App() {
             justifyContent="center"
             spacing={6}
           >
-            <Grid item xs={0.5}>
+            <Grid item xs={2} sm={1} md={1} xl={0.5}>
               <GitHubIcon></GitHubIcon>
             </Grid>
             {/* <Grid item xs={0.5}>
               <EmailIcon></EmailIcon>
             </Grid> */}
-            <Grid item xs={0.5}>
+            <Grid item xs={2} sm={1} md={1} xl={0.5}>
               <LinkedInIcon></LinkedInIcon>
             </Grid>
+          </Grid>
+          <Grid
+            container
+            direction="row"
+            justifyContent="center"
+            alignItems="flex-end"
+            spacing={0}
+            style={{
+              top: 5,
+              position: "absolute",
+            }}
+          >
+            <Navbar></Navbar>
+            {/* <Grid item xs md={2} sm={2} xl={1}>
+              <Typography variant="subtitle1" component="h2">
+                About me
+              </Typography>
+            </Grid>
+            <Grid item xs md={2} sm={2} xl={1}>
+              <Typography variant="subtitle1" component="h2">
+                Resume
+              </Typography>
+            </Grid> */}
           </Grid>
         </Grid>
       </div>
