@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.073c9b0a.css",
-    "main.js": "/portfolio/static/js/main.1a11226c.js",
-    "static/js/787.28cb0dcd.chunk.js": "/portfolio/static/js/787.28cb0dcd.chunk.js",
-    "index.html": "/portfolio/index.html",
-    "main.073c9b0a.css.map": "/portfolio/static/css/main.073c9b0a.css.map",
-    "main.1a11226c.js.map": "/portfolio/static/js/main.1a11226c.js.map",
-    "787.28cb0dcd.chunk.js.map": "/portfolio/static/js/787.28cb0dcd.chunk.js.map"
+    "main.css": "/adeebismail.com/static/css/main.073c9b0a.css",
+    "main.js": "/adeebismail.com/static/js/main.f9e2b73b.js",
+    "static/js/787.28cb0dcd.chunk.js": "/adeebismail.com/static/js/787.28cb0dcd.chunk.js",
+    "index.html": "/adeebismail.com/index.html",
+    "main.073c9b0a.css.map": "/adeebismail.com/static/css/main.073c9b0a.css.map",
+    "main.f9e2b73b.js.map": "/adeebismail.com/static/js/main.f9e2b73b.js.map",
+    "787.28cb0dcd.chunk.js.map": "/adeebismail.com/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.1a11226c.js"
+    "static/js/main.f9e2b73b.js"
   ]
 }
