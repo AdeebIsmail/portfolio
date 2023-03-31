@@ -59,43 +59,38 @@ function App() {
           <Grid item xs={3}>
             {" "}
             <Chip
+              href="https://github.com/AdeebIsmail/ReFinance"
+              component="a"
               label="ReFinance"
               variant="outlined"
-              onClick={(event) =>
-                window.open("https://github.com/AdeebIsmail/ReFinance")
-              }
               clickable
             />{" "}
             <Chip
+              href="https://github.com/KshitijKapoor8/Giftin"
+              component="a"
               label="Giftin"
               variant="outlined"
-              onClick={(event) =>
-                window.open("https://github.com/KshitijKapoor8/Giftin")
-              }
               clickable
             />{" "}
             <Chip
+              component="a"
               label="Empath"
               variant="outlined"
-              onClick={(event) =>
-                window.open("https://github.com/KshitijKapoor8/Project")
-              }
+              href="https://github.com/KshitijKapoor8/Project"
               clickable
             />{" "}
             <Chip
+              href="https://github.com/AdeebIsmail/leetclone-spotify"
+              component="a"
               label="LeetClone"
               variant="outlined"
-              onClick={(event) =>
-                window.open("https://github.com/AdeebIsmail/leetclone-spotify")
-              }
               clickable
             />{" "}
             <Chip
+              component="a"
+              href="https://github.com/SamrutGadde/OTHSCS"
               label="OTHSCS"
               variant="outlined"
-              onClick={(event) =>
-                window.open("https://github.com/SamrutGadde/OTHSCS")
-              }
               clickable
             />{" "}
           </Grid>
