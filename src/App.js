@@ -10,7 +10,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import Chip from "@mui/material/Chip";
 import EmailIcon from "@mui/icons-material/Email";
-import Divider from "@mui/material/Divider";
+import IconButton from "@mui/material/IconButton";
 const darkTheme = createTheme({
   palette: {
     mode: "dark",
@@ -72,13 +72,25 @@ function App() {
             spacing={6}
           >
             <Grid item xs={2} sm={1} md={1} xl={0.5}>
-              <GitHubIcon></GitHubIcon>
+              <IconButton
+                href="https://github.com/AdeebIsmail/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <GitHubIcon></GitHubIcon>
+              </IconButton>
             </Grid>
             {/* <Grid item xs={0.5}>
               <EmailIcon></EmailIcon>
             </Grid> */}
             <Grid item xs={2} sm={1} md={1} xl={0.5}>
-              <LinkedInIcon></LinkedInIcon>
+              <IconButton
+                href="https://github.com/AdeebIsmail/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <LinkedInIcon></LinkedInIcon>
+              </IconButton>
             </Grid>
           </Grid>
           <Grid
@@ -88,7 +100,7 @@ function App() {
             alignItems="flex-end"
             spacing={0}
             style={{
-              top: 5,
+              top: 0,
               position: "absolute",
             }}
           >
