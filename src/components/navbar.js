@@ -37,10 +37,6 @@ export default function ButtonAppBar() {
             <Button variant="text" color="inherit" style={{ borderRadius: 0 }}>
               Resume
             </Button>
-            <Divider orientation="vertical" flexItem></Divider>
-            <Button variant="text" color="inherit" style={{ borderRadius: 0 }}>
-              Course Work
-            </Button>
           </Grid>
         </Toolbar>
       </AppBar>
