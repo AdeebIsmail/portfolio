@@ -58,11 +58,46 @@ function App() {
 
           <Grid item xs={3}>
             {" "}
-            <Chip label="ReFinance" variant="outlined" />{" "}
-            <Chip label="Giftin" variant="outlined" />{" "}
-            <Chip label="Empath" variant="outlined" />{" "}
-            <Chip label="LeetClone" variant="outlined" />{" "}
-            <Chip label="OTHSCS" variant="outlined" />{" "}
+            <Chip
+              label="ReFinance"
+              variant="outlined"
+              onClick={(event) =>
+                window.open("https://github.com/AdeebIsmail/ReFinance")
+              }
+              clickable
+            />{" "}
+            <Chip
+              label="Giftin"
+              variant="outlined"
+              onClick={(event) =>
+                window.open("https://github.com/KshitijKapoor8/Giftin")
+              }
+              clickable
+            />{" "}
+            <Chip
+              label="Empath"
+              variant="outlined"
+              onClick={(event) =>
+                window.open("https://github.com/KshitijKapoor8/Project")
+              }
+              clickable
+            />{" "}
+            <Chip
+              label="LeetClone"
+              variant="outlined"
+              onClick={(event) =>
+                window.open("https://github.com/AdeebIsmail/leetclone-spotify")
+              }
+              clickable
+            />{" "}
+            <Chip
+              label="OTHSCS"
+              variant="outlined"
+              onClick={(event) =>
+                window.open("https://github.com/SamrutGadde/OTHSCS")
+              }
+              clickable
+            />{" "}
           </Grid>
           <Grid
             item
