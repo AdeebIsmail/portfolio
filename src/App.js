@@ -9,7 +9,6 @@ import Typography from "@mui/material/Typography";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import Chip from "@mui/material/Chip";
-import EmailIcon from "@mui/icons-material/Email";
 import IconButton from "@mui/material/IconButton";
 const darkTheme = createTheme({
   palette: {
@@ -64,6 +63,7 @@ function App() {
               label="ReFinance"
               variant="outlined"
               clickable
+              style={{ marginTop: 5 }}
             />{" "}
             <Chip
               href="https://github.com/KshitijKapoor8/Giftin"
@@ -71,6 +71,7 @@ function App() {
               label="Giftin"
               variant="outlined"
               clickable
+              style={{ marginTop: 5 }}
             />{" "}
             <Chip
               component="a"
@@ -78,6 +79,7 @@ function App() {
               variant="outlined"
               href="https://github.com/KshitijKapoor8/Project"
               clickable
+              style={{ marginTop: 5 }}
             />{" "}
             <Chip
               href="https://github.com/AdeebIsmail/leetclone-spotify"
@@ -85,6 +87,7 @@ function App() {
               label="LeetClone"
               variant="outlined"
               clickable
+              style={{ marginTop: 5 }}
             />{" "}
             <Chip
               component="a"
@@ -92,36 +95,29 @@ function App() {
               label="OTHSCS"
               variant="outlined"
               clickable
+              style={{ marginTop: 5 }}
             />{" "}
           </Grid>
-          <Grid
-            item
-            container
-            alignItems="center"
-            justifyContent="center"
-            spacing={6}
-          >
-            <Grid item xs={2} sm={1} md={1} xl={0.5}>
-              <IconButton
-                href="https://github.com/AdeebIsmail/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <GitHubIcon></GitHubIcon>
-              </IconButton>
-            </Grid>
-            {/* <Grid item xs={0.5}>
-              <EmailIcon></EmailIcon>
+
+          {/* <Grid item xs={0.5}>
+              <EmailIcon></EmailIcon> = {}
             </Grid> */}
-            <Grid item xs={2} sm={1} md={1} xl={0.5}>
-              <IconButton
-                href="https://github.com/AdeebIsmail/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <LinkedInIcon></LinkedInIcon>
-              </IconButton>
-            </Grid>
+          <Grid item xs={2} sm={1} md={1} lg={0} xl={0.5}>
+            <IconButton
+              href="https://github.com/AdeebIsmail/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <GitHubIcon></GitHubIcon>
+            </IconButton>
+
+            <IconButton
+              href="https://github.com/AdeebIsmail/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <LinkedInIcon></LinkedInIcon>
+            </IconButton>
           </Grid>
           <Grid
             container
