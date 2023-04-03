@@ -20,7 +20,7 @@ import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
-
+import { Document, Page } from "react-pdf";
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
@@ -69,6 +69,7 @@ export default function ButtonAppBar() {
             >
               Resume
             </Button>
+
             {/* <Divider orientation="vertical" flexItem></Divider>
             <Button
               variant="text"
@@ -103,6 +104,15 @@ export default function ButtonAppBar() {
             </Typography>
           </Toolbar>
         </AppBar>
+
+        <iframe
+          src="https://drive.google.com/file/d/1JlALSfS6-ifE1ofqLAxsgjp2YM6QB5kN/preview"
+          frameBorder="0"
+          scrolling="auto"
+          height="100%"
+          width="100%"
+        ></iframe>
+
         {/* <Grid
           container
           direction="row"

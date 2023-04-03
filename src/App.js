@@ -119,6 +119,7 @@ function App() {
               <LinkedInIcon></LinkedInIcon>
             </IconButton>
           </Grid>
+
           <Grid
             container
             direction="row"
