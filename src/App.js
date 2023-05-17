@@ -112,7 +112,7 @@ function App() {
             </IconButton>
 
             <IconButton
-              href="https://github.com/AdeebIsmail/"
+              href="https://www.linkedin.com/in/adeeb-ismail-a87762276/"
               target="_blank"
               rel="noopener noreferrer"
             >
