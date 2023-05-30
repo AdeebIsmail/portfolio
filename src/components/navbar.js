@@ -13,7 +13,8 @@ import Slide from "@mui/material/Slide";
 import { Document, Page } from 'react-pdf/dist/esm/entry.webpack5';
 import pdf from './resume.pdf';
 import { pdfjs } from 'react-pdf';
-
+import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
+import 'react-pdf/dist/esm/Page/TextLayer.css';
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
   'pdfjs-dist/build/pdf.worker.min.js',
   import.meta.url,
@@ -107,13 +108,13 @@ export default function ButtonAppBar() {
             </IconButton> </Box>
           </Toolbar>
         </AppBar>
-        {/* <iframe
+        <iframe
           src="https://drive.google.com/file/d/1JlALSfS6-ifE1ofqLAxsgjp2YM6QB5kN/preview"
           frameBorder="0"
           scrolling="auto"
           height="100%"
           width="100%"
-        ></iframe> */}
+        ></iframe>
  {/* <iframe
             src={pdf}
             type='application/pdf'
@@ -124,14 +125,19 @@ export default function ButtonAppBar() {
             width="100%"
           />    */}
           
-          <div class="" style={{ height: "100%" , backgroundColor : "white"}}>
+          {/* <div class="" style={{ height: "100%" , backgroundColor : "white"}}>
         <embed
           src={pdf}
           type="application/pdf"
           width="100%"
           height="100%"
         />
-</div>
+</div> */} 
+{/* <div    >      <Document file={pdf}>
+        <Page pageNumber={1} width="300"/>
+      </Document> </div> */}
+
+
           {/* <object data={pdf} width={"100%"} height={"100%"} type="application/pdf" style = {{backgroundColor : "white"}} ></object> */}
           
             {/* <Grid
