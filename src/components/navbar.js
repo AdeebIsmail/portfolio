@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useState } from 'react';
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -6,21 +6,18 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import Grid from "@mui/material/Grid";
 import Divider from "@mui/material/Divider";
-import Backdrop from "@mui/material/Backdrop";
-import Modal from "@mui/material/Modal";
-import Fade from "@mui/material/Fade";
 import Dialog from "@mui/material/Dialog";
-import ListItemText from "@mui/material/ListItemText";
-import ListItem from "@mui/material/ListItem";
-import List from "@mui/material/List";
 import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
 import Slide from "@mui/material/Slide";
-import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import { Document, Page } from "react-pdf";
+import { Document, Page } from 'react-pdf/dist/esm/entry.webpack5';
+import pdf from './resume.pdf';
+import { pdfjs } from 'react-pdf';
+
+pdfjs.GlobalWorkerOptions.workerSrc = new URL(
+  'pdfjs-dist/build/pdf.worker.min.js',
+  import.meta.url,
+).toString();
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
@@ -34,7 +31,12 @@ export default function ButtonAppBar() {
   const handleClose = () => {
     setOpen(false);
   };
+  const [numPages, setNumPages] = useState(null);
+  const [pageNumber, setPageNumber] = useState(1);
 
+  function onDocumentLoadSuccess({ numPages }) {
+    setNumPages(numPages);
+  }
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar
@@ -90,30 +92,49 @@ export default function ButtonAppBar() {
       >
         <AppBar sx={{ position: "relative" }}>
           <Toolbar>
-            <IconButton
+            <Box display='flex' flexGrow={1}>             
+              <Typography variant="h6" component="div">
+              Resume
+            </Typography></Box>
+
+            <Box><IconButton
               edge="start"
               color="inherit"
               onClick={handleClose}
               aria-label="close"
-              sx={{ position: "fixed", top: 10, right: 10 }}
             >
               <CloseIcon />
-            </IconButton>
-            <Typography sx={{ ml: 2, flex: 1 }} variant="h6" component="div">
-              Resume
-            </Typography>
+            </IconButton> </Box>
           </Toolbar>
         </AppBar>
-
-        <iframe
+        {/* <iframe
           src="https://drive.google.com/file/d/1JlALSfS6-ifE1ofqLAxsgjp2YM6QB5kN/preview"
           frameBorder="0"
           scrolling="auto"
           height="100%"
           width="100%"
-        ></iframe>
-
-        {/* <Grid
+        ></iframe> */}
+ {/* <iframe
+            src={pdf}
+            type='application/pdf'
+            title='title'
+            frameBorder="0"
+            scrolling="auto"
+            height="100%"
+            width="100%"
+          />    */}
+          
+          <div class="" style={{ height: "100%" , backgroundColor : "white"}}>
+        <embed
+          src={pdf}
+          type="application/pdf"
+          width="100%"
+          height="100%"
+        />
+</div>
+          {/* <object data={pdf} width={"100%"} height={"100%"} type="application/pdf" style = {{backgroundColor : "white"}} ></object> */}
+          
+            {/* <Grid
           container
           direction="row"
           justifyContent="center"
