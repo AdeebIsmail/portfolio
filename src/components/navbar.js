@@ -10,11 +10,11 @@ import Dialog from "@mui/material/Dialog";
 import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
 import Slide from "@mui/material/Slide";
-import { Document, Page } from 'react-pdf/dist/esm/entry.webpack5';
-import pdf from './resume.pdf';
 import { pdfjs } from 'react-pdf';
 import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
 import 'react-pdf/dist/esm/Page/TextLayer.css';
+import pdf from "./resume.pdf"
+import CircularProgress from '@mui/material/CircularProgress';
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
   'pdfjs-dist/build/pdf.worker.min.js',
   import.meta.url,
@@ -24,7 +24,6 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 });
 export default function ButtonAppBar() {
   const [open, setOpen] = React.useState(false);
-
   const handleClickOpen = () => {
     setOpen(true);
   };
@@ -32,12 +31,10 @@ export default function ButtonAppBar() {
   const handleClose = () => {
     setOpen(false);
   };
-  const [numPages, setNumPages] = useState(null);
-  const [pageNumber, setPageNumber] = useState(1);
 
-  function onDocumentLoadSuccess({ numPages }) {
-    setNumPages(numPages);
-  }
+  const handleiframeload = () => {  window.alert("sometext");}
+
+
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar
@@ -108,180 +105,25 @@ export default function ButtonAppBar() {
             </IconButton> </Box>
           </Toolbar>
         </AppBar>
-        <iframe
+        {/* <iframe
           src="https://drive.google.com/file/d/1JlALSfS6-ifE1ofqLAxsgjp2YM6QB5kN/preview"
           frameBorder="0"
           scrolling="auto"
           height="100%"
           width="100%"
-        ></iframe>
- {/* <iframe
-            src={pdf}
-            type='application/pdf'
-            title='title'
-            frameBorder="0"
-            scrolling="auto"
-            height="100%"
-            width="100%"
-          />    */}
-          
-          {/* <div class="" style={{ height: "100%" , backgroundColor : "white"}}>
-        <embed
-          src={pdf}
-          type="application/pdf"
-          width="100%"
-          height="100%"
-        />
-</div> */} 
-{/* <div    >      <Document file={pdf}>
-        <Page pageNumber={1} width="300"/>
-      </Document> </div> */}
+          onload = "handleiframeload()"
+        ></iframe> */}
+
+        <object           data="https://drive.google.com/file/d/1JlALSfS6-ifE1ofqLAxsgjp2YM6QB5kN/preview"
+ width="100%" height="100%" >
+            <div style = {{display: "flex", justifyContent: "center", alignItems: "center"}}><p>Google pdf viewer isn't working, <a href={pdf}>click here to
+  download the PDF file.</a></p> </div>
+          </object>
+
+        
 
 
-          {/* <object data={pdf} width={"100%"} height={"100%"} type="application/pdf" style = {{backgroundColor : "white"}} ></object> */}
-          
-            {/* <Grid
-          container
-          direction="row"
-          justifyContent="center"
-          alignItems="flex-start"
-        >
-          <Card
-            sx={{
-              maxWidth: 345,
-              marginTop: "1vh",
-              marginBottom: "1vh",
-              marginLeft: "1vw",
-              marginRight: "1vw",
-            }}
-          >
-            <CardMedia
-              sx={{ height: 140 }}
-              image="https://user-images.githubusercontent.com/51217487/99621152-c2135680-29ec-11eb-926a-a18cb2c9038c.png"
-              title="green iguana"
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
-                Refinance
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                Website made users improve there personal finance by helping
-                budget and save money.
-              </Typography>
-            </CardContent>
-            <CardActions>
-              <Button size="small">Learn More</Button>
-            </CardActions>
-          </Card>
-          <Card
-            sx={{
-              maxWidth: 345,
-              marginTop: "1vh",
-              marginBottom: "1vh",
-              marginLeft: "1vw",
-              marginRight: "1vw",
-            }}
-          >
-            <CardMedia
-              sx={{ height: 140 }}
-              image="https://user-images.githubusercontent.com/51217487/103327607-dc444980-4a1a-11eb-863c-5bd4255e7e88.png"
-              title="green iguana"
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
-                Giftin
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                A novel new platform in which users can view exactly what other
-                users want and manage their own wishlists.
-              </Typography>
-            </CardContent>
-            <CardActions>
-              <Button size="small">Learn More</Button>
-            </CardActions>
-          </Card>
-          <Card
-            sx={{
-              maxWidth: 345,
-              marginTop: "1vh",
-              marginBottom: "1vh",
-              marginLeft: "1vw",
-              marginRight: "1vw",
-            }}
-          >
-            <CardMedia
-              sx={{ height: 140 }}
-              image="https://user-images.githubusercontent.com/51217487/99621152-c2135680-29ec-11eb-926a-a18cb2c9038c.png"
-              title="green iguana"
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
-                Refinance
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                Website made users improve there personal finance by helping
-                budget and save money.
-              </Typography>
-            </CardContent>
-            <CardActions>
-              <Button size="small">Learn More</Button>
-            </CardActions>
-          </Card>
-          <Card
-            sx={{
-              maxWidth: 345,
-              marginTop: "1vh",
-              marginBottom: "1vh",
-              marginLeft: "1vw",
-              marginRight: "1vw",
-            }}
-          >
-            <CardMedia
-              sx={{ height: 140 }}
-              image="https://user-images.githubusercontent.com/51217487/99621152-c2135680-29ec-11eb-926a-a18cb2c9038c.png"
-              title="green iguana"
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
-                Refinance
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                Website made users improve there personal finance by helping
-                budget and save money.
-              </Typography>
-            </CardContent>
-            <CardActions>
-              <Button size="small">Learn More</Button>
-            </CardActions>
-          </Card>
-          <Card
-            sx={{
-              maxWidth: 345,
-              marginTop: "1vh",
-              marginBottom: "1vh",
-              marginLeft: "1vw",
-              marginRight: "1vw",
-            }}
-          >
-            <CardMedia
-              sx={{ height: 140 }}
-              image="https://user-images.githubusercontent.com/51217487/99621152-c2135680-29ec-11eb-926a-a18cb2c9038c.png"
-              title="green iguana"
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
-                Refinance
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                Website made users improve there personal finance by helping
-                budget and save money.
-              </Typography>
-            </CardContent>
-            <CardActions>
-              <Button size="small">Learn More</Button>
-            </CardActions>
-          </Card>
-        </Grid> */}
+        
       </Dialog>
     </Box>
   );
