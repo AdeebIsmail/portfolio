@@ -32,7 +32,6 @@ export default function ButtonAppBar() {
     setOpen(false);
   };
 
-  const handleiframeload = () => {  window.alert("sometext");}
 
 
   return (
@@ -113,11 +112,10 @@ export default function ButtonAppBar() {
           width="100%"
           onload = "handleiframeload()"
         ></iframe> */}
-
-        <object           data="https://drive.google.com/file/d/1JlALSfS6-ifE1ofqLAxsgjp2YM6QB5kN/preview"
+        <object        data="https://drive.google.com/file/d/1JlALSfS6-ifE1ofqLAxsgjp2YM6QB5kN/preview"
  width="100%" height="100%" >
             <div style = {{display: "flex", justifyContent: "center", alignItems: "center"}}><p>Google pdf viewer isn't working, <a href={pdf}>click here to
-  download the PDF file.</a></p> </div>
+  download the PDF file.</a></p>       </div>
           </object>
 
         

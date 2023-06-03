@@ -10,6 +10,9 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import Chip from "@mui/material/Chip";
 import IconButton from "@mui/material/IconButton";
+import ArticleIcon from '@mui/icons-material/Article';
+import pdf from "./components/resume.pdf"
+
 const darkTheme = createTheme({
   palette: {
     mode: "dark",
@@ -36,7 +39,7 @@ function App() {
           direction="column"
           alignItems="center"
           justifyContent="center"
-          style={{ minHeight: "100vh" }}
+          style={{ minHeight: "90vh" }}
         >
           <Grid item xs={3}>
             <TypeWriterEffect
@@ -117,6 +120,13 @@ function App() {
               rel="noopener noreferrer"
             >
               <LinkedInIcon></LinkedInIcon>
+            </IconButton>
+            <IconButton
+              href={pdf}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <ArticleIcon></ArticleIcon>
             </IconButton>
           </Grid>
 
