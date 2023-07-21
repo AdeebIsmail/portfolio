@@ -36,39 +36,42 @@ function Pictures() {
         justifyContent="space-evenly"
         alignItems="center"
       >
-        <Card sx={{ maxWidth: 500, marginTop: "1em" }}>
-          <CardMedia sx={{ height: 400, width: 500 }} image={picture1} />
+        <Card sx={{ maxWidth: 400, marginTop: "1em" }}>
+          <CardMedia sx={{ height: 400, width: 400 }} image={picture1} />
           <CardContent>
             <Typography
               variant="body2"
               color="text.secondary"
               sx={{ fontStyle: "italic" }}
+              align="center"
             >
               “We wants it, we needs it. Must have the precious.” — Gollum
             </Typography>
           </CardContent>
         </Card>
-        <Card sx={{ maxWidth: 500, marginTop: "1em" }}>
-          <CardMedia sx={{ height: 400, width: 500 }} image={picture2} />
+        <Card sx={{ maxWidth: 400, marginTop: "1em" }}>
+          <CardMedia sx={{ height: 400, width: 400 }} image={picture2} />
           <CardContent>
             <Typography
               variant="body2"
               color="text.secondary"
               sx={{ fontStyle: "italic" }}
+              align="center"
             >
               whaaaattt????
             </Typography>
           </CardContent>
         </Card>
-        <Card sx={{ maxWidth: 500, marginTop: "1em" }}>
-          <CardMedia sx={{ height: 400, width: 500 }} image={picture3} />
+        <Card sx={{ maxWidth: 400, marginTop: "1em" }}>
+          <CardMedia sx={{ height: 400, width: 400 }} image={picture3} />
           <CardContent>
             <Typography
               variant="body2"
               color="text.secondary"
               sx={{ fontStyle: "italic" }}
+              align="center"
             >
-              In one ear and out the other
+              oh ok
             </Typography>
           </CardContent>
         </Card>

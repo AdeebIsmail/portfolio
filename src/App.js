@@ -6,12 +6,10 @@ import Pictures from "./pages/pictures";
 
 function App() {
   return (
-    <div className="App">
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="pictures" element={<Pictures />} />
-      </Routes>
-    </div>
+    <Routes>
+      <Route path="/pictures/" element={<Pictures />} />
+      <Route path="/" element={<Home />} />
+    </Routes>
   );
 }
 
