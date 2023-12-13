@@ -24,6 +24,6 @@ yarn-error.log*
 src/components/CalculusCheatSheet.pdf
 src/components/resume.pdf
 src/index.js
-src/pictures/IMG_3699.jpg
-src/pictures/IMG_3739.jpg
-src/pictures/IMG_8806.jpg
+# src/pictures/IMG_3699.jpg
+# src/pictures/IMG_3739.jpg
+# src/pictures/IMG_8806.jpg
