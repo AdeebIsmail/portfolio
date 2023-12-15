@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -10,14 +10,14 @@ import Dialog from "@mui/material/Dialog";
 import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
 import Slide from "@mui/material/Slide";
-import { pdfjs } from 'react-pdf';
-import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
-import 'react-pdf/dist/esm/Page/TextLayer.css';
-import pdf from "./resume.pdf"
-import CircularProgress from '@mui/material/CircularProgress';
+import { pdfjs } from "react-pdf";
+import "react-pdf/dist/esm/Page/AnnotationLayer.css";
+import "react-pdf/dist/esm/Page/TextLayer.css";
+import pdf from "./Adeebs_Resume.pdf";
+import CircularProgress from "@mui/material/CircularProgress";
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
-  'pdfjs-dist/build/pdf.worker.min.js',
-  import.meta.url,
+  "pdfjs-dist/build/pdf.worker.min.js",
+  import.meta.url
 ).toString();
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
@@ -31,8 +31,6 @@ export default function ButtonAppBar() {
   const handleClose = () => {
     setOpen(false);
   };
-
-
 
   return (
     <Box sx={{ flexGrow: 1 }}>
@@ -89,19 +87,22 @@ export default function ButtonAppBar() {
       >
         <AppBar sx={{ position: "relative" }}>
           <Toolbar>
-            <Box display='flex' flexGrow={1}>             
+            <Box display="flex" flexGrow={1}>
               <Typography variant="h6" component="div">
-              Resume
-            </Typography></Box>
+                Resume
+              </Typography>
+            </Box>
 
-            <Box><IconButton
-              edge="start"
-              color="inherit"
-              onClick={handleClose}
-              aria-label="close"
-            >
-              <CloseIcon />
-            </IconButton> </Box>
+            <Box>
+              <IconButton
+                edge="start"
+                color="inherit"
+                onClick={handleClose}
+                aria-label="close"
+              >
+                <CloseIcon />
+              </IconButton>{" "}
+            </Box>
           </Toolbar>
         </AppBar>
         {/* <iframe
@@ -112,16 +113,24 @@ export default function ButtonAppBar() {
           width="100%"
           onload = "handleiframeload()"
         ></iframe> */}
-        <object        data="https://drive.google.com/file/d/1JlALSfS6-ifE1ofqLAxsgjp2YM6QB5kN/preview"
- width="100%" height="100%" >
-            <div style = {{display: "flex", justifyContent: "center", alignItems: "center"}}><p>Google pdf viewer isn't working, <a href={pdf}>click here to
-  download the PDF file.</a></p>       </div>
-          </object>
-
-        
-
-
-        
+        <object
+          data="https://drive.google.com/file/d/1JlALSfS6-ifE1ofqLAxsgjp2YM6QB5kN/preview"
+          width="100%"
+          height="100%"
+        >
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <p>
+              Google pdf viewer isn't working,{" "}
+              <a href={pdf}>click here to download the PDF file.</a>
+            </p>{" "}
+          </div>
+        </object>
       </Dialog>
     </Box>
   );

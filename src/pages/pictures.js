@@ -13,6 +13,8 @@ import { CoPresentSharp } from "@mui/icons-material";
 import picture1 from "../pictures/IMG_8806.jpg";
 import picture2 from "../pictures/IMG_3699.jpg";
 import picture3 from "../pictures/IMG_3739.jpg";
+import picture4 from "../pictures/IMG_3814.jpg";
+
 const darkTheme = createTheme({
   palette: {
     mode: "dark",
@@ -72,6 +74,19 @@ function Pictures() {
               align="center"
             >
               oh ok
+            </Typography>
+          </CardContent>
+        </Card>
+        <Card sx={{ maxWidth: 400, marginTop: "1em" }}>
+          <CardMedia sx={{ height: 400, width: 400 }} image={picture4} />
+          <CardContent>
+            <Typography
+              variant="body2"
+              color="text.secondary"
+              sx={{ fontStyle: "italic" }}
+              align="center"
+            >
+              uhhh no
             </Typography>
           </CardContent>
         </Card>

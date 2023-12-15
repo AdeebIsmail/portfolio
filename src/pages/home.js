@@ -11,7 +11,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import Chip from "@mui/material/Chip";
 import IconButton from "@mui/material/IconButton";
 import ArticleIcon from "@mui/icons-material/Article";
-import pdf from "../components/resume.pdf";
+import pdf from "../components/Adeebs_Resume.pdf";
 
 const darkTheme = createTheme({
   palette: {
