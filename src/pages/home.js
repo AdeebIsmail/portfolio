@@ -85,9 +85,9 @@ function Home() {
               style={{ marginTop: 5 }}
             />{" "}
             <Chip
-              href="https://github.com/AdeebIsmail/ImageMetaData"
+              href="https://devpost.com/software/seek-ju5cw8"
               component="a"
-              label="Image Metadata"
+              label="Seek"
               variant="outlined"
               clickable
               style={{ marginTop: 5 }}
