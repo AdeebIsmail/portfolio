@@ -6,10 +6,11 @@ import Home from "./pages/home";
 
 function App() {
   return (
-    <Routes>
-      {/* <Route path="/pictures/" element={<Pictures />} /> */}
-      <Route path="/" element={<Home />} />
-    </Routes>
+    // <Routes>
+    //   <Route path="/pictures/" element={<Pictures />} />
+    //   <Route path="/" element={<Home />} />
+    // </Routes>
+    <Home />
   );
 }
 

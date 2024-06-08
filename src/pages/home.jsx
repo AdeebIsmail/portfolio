@@ -9,13 +9,13 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import Chip from "@mui/material/Chip";
 import IconButton from "@mui/material/IconButton";
-import ArticleIcon from "@mui/icons-material/Article";
+import {Article} from "@mui/icons-material";
 import pdf from "../components/Adeebs_Resume.pdf";
 import Card from "../components/outlinedcard";
 import "animate.css/animate.compat.css";
 import ScrollAnimation from "react-animate-on-scroll";
 import ResumeCard from "../components/resumecard";
-import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
+import {ArrowDownward} from "@mui/icons-material/";
 const darkTheme = createTheme({
   palette: {
     mode: "dark",
@@ -113,7 +113,7 @@ function Home() {
               <LinkedInIcon></LinkedInIcon>
             </IconButton>
             <IconButton href={pdf} target="_blank" rel="noopener noreferrer">
-              <ArticleIcon></ArticleIcon>
+              <Article></Article>
             </IconButton>
           </Grid>
 
@@ -130,9 +130,9 @@ function Home() {
           ></Grid> */}
         </Grid>
         <ScrollAnimation animateIn="bounce" initiallyVisible={true}>
-          <ArrowDownwardIcon
+          <ArrowDownward
             style={{ color: "white", fontSize: 50 }}
-          ></ArrowDownwardIcon>
+          ></ArrowDownward>
         </ScrollAnimation>
         <Grid
           container
@@ -145,9 +145,9 @@ function Home() {
             <Card></Card>
           </ScrollAnimation>
           <ScrollAnimation animateIn="bounce" initiallyVisible={true}>
-            <ArrowDownwardIcon
+            <ArrowDownward
               style={{ color: "white", fontSize: 50 }}
-            ></ArrowDownwardIcon>
+            ></ArrowDownward>
           </ScrollAnimation>
         </Grid>
 

@@ -3,14 +3,14 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import ReactGA from "react-ga4";
+// import ReactGA from "react-ga4";
 import { HashRouter } from "react-router-dom";
-ReactGA.initialize("G-XCLQN5YK7J");
+// ReactGA.initialize("G-XCLQN5YK7J");
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <HashRouter basename={"/portfolio/"}>
+  // <HashRouter basename="/portfolio">
     <App />
-  </HashRouter>
+  // </HashRouter>
 );
 
 // If you want to start measuring performance in your app, pass a function

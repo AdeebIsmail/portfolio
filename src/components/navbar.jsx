@@ -8,7 +8,7 @@ import Grid from "@mui/material/Grid";
 import Divider from "@mui/material/Divider";
 import Dialog from "@mui/material/Dialog";
 import IconButton from "@mui/material/IconButton";
-import CloseIcon from "@mui/icons-material/Close";
+import {Close} from "@mui/icons-material";
 import Slide from "@mui/material/Slide";
 import pdf from "./Adeebs_Resume.pdf";
 const Transition = React.forwardRef(function Transition(props, ref) {
@@ -76,7 +76,7 @@ export default function ButtonAppBar() {
                 onClick={handleClose}
                 aria-label="close"
               >
-                <CloseIcon />
+                <Close />
               </IconButton>{" "}
             </Box>
           </Toolbar>
