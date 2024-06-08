@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from 'react';
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -10,15 +10,7 @@ import Dialog from "@mui/material/Dialog";
 import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
 import Slide from "@mui/material/Slide";
-import { pdfjs } from "react-pdf";
-import "react-pdf/dist/esm/Page/AnnotationLayer.css";
-import "react-pdf/dist/esm/Page/TextLayer.css";
 import pdf from "./Adeebs_Resume.pdf";
-import CircularProgress from "@mui/material/CircularProgress";
-pdfjs.GlobalWorkerOptions.workerSrc = new URL(
-  "pdfjs-dist/build/pdf.worker.min.js",
-  import.meta.url
-).toString();
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
@@ -39,13 +31,6 @@ export default function ButtonAppBar() {
         style={{ background: "transparent", boxShadow: "none" }}
       >
         <Toolbar>
-          {/* <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            About me
-          </Typography>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            Resume
-          </Typography> */}
-
           <Grid
             container
             direction="row"
@@ -54,27 +39,18 @@ export default function ButtonAppBar() {
             spacing={0}
             style={{}}
           >
-            <Button variant="text" color="inherit" style={{ borderRadius: 0 }}>
+            
+            {/* <Button variant="text" color="inherit" style={{ borderRadius: 0 }}>
               About
             </Button>
-            <Divider orientation="vertical" flexItem></Divider>
-            <Button
+            <Divider orientation="vertical" flexItem></Divider> */}
+            {/* <Button
               variant="text"
               color="inherit"
               style={{ borderRadius: 0 }}
               onClick={handleClickOpen}
             >
               Resume
-            </Button>
-
-            {/* <Divider orientation="vertical" flexItem></Divider>
-            <Button
-              variant="text"
-              color="inherit"
-              style={{ borderRadius: 0 }}
-              onClick={handleClickOpen}
-            >
-              Projects
             </Button> */}
           </Grid>
         </Toolbar>
