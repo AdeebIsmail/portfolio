@@ -1,9 +1,21 @@
 {
-  "name": "my-app",
-  "version": "0.1.0",
-  "private": false,
+  "name": "portfolio-website",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "homepage": "https://AdeebIsmail.github.io/portfolio",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
+  },
   "dependencies": {
+    "@vitejs/plugin-react": "^4.3.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
     "@mui/icons-material": "^5.15.19",
@@ -17,7 +29,7 @@
     "react-animate-on-scroll": "^2.1.9",
     "react-dom": "^18.2.0",
     "react-ga4": "^2.1.0",
-    "react-router-dom": "^6.21.0",
+    "react-router-dom": "^6.23.1",
     "react-typewriter-effect": "^1.1.0",
     "typescript": "^5.4.5",
     "typewriter-effect": "^2.19.0",
@@ -25,36 +37,5 @@
     "vite-tsconfig-paths": "^4.3.2",
     "web-vitals": "^2.1.4",
     "webpack-dev-server": "^5.0.4"
-  },
-  "scripts": {
-    "start": "vite",
-    "build": "vite build",
-    "serve": "vite preview"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "devDependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "@vitejs/plugin-react": "^4.3.0",
-    "autoprefixer": "^10.4.14",
-    "gh-pages": "^5.0.0",
-    "postcss": "^8.4.21",
-    "tailwindcss": "^3.3.0"
   }
 }
