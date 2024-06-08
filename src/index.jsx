@@ -8,7 +8,7 @@ import { HashRouter } from "react-router-dom";
 ReactGA.initialize("G-XCLQN5YK7J");
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <HashRouter>
+  <HashRouter basename={"/portfolio/"}>
     <App />
   </HashRouter>
 );
